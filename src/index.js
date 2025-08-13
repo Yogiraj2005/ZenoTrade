@@ -19,13 +19,13 @@ root.render(
     <BrowserRouter>
     <Navbar></Navbar>
       <Routes>
-        <Route path='/' element={<HomePage/>}></Route>
-        <Route path='/ signup' element={ <Signup/>}></Route>
-        <Route path='/about   ' element={<AboutPage   />}></Route>
-        <Route path='/product' element={<ProductPage/>}></Route>
-        <Route path='/pricing' element={<PricingPage/>}></Route>
-        <Route path='/support' element={<SupportPage/>}></Route>
-        <Route path='*' element={<NotFound/>}></Route>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/signup' element={ <Signup/>}/>
+        <Route path='/about' element={<AboutPage/>}/>
+        <Route path='/pricing' element={<PricingPage/>}/>
+        <Route path='/support' element={<SupportPage/>}/>
+        <Route path='/products' element={<ProductPage/>}/>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>

@@ -1,8 +1,15 @@
 import React from 'react'
+import CreateTicket from './CreateTicket';
+import Hero from './Hero';
+import Support from './Support';
 
 function SupportPage() {
     return (  
-        <h1>SupportPage</h1>
+         <>
+            <CreateTicket/>
+            <Hero/>
+            <Support/>
+        </>
     );
 }
 

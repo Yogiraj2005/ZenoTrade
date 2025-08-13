@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-function About () {
-    return ( 
-        <h1>About</h1>
-     );
+import Hero from "./Hero";
+import Team from "./Team";
+
+function AboutPage() {
+  return (
+    <>
+      <Hero />
+      <Team />
+    </>
+  );
 }
 
-export default About ;
+export default AboutPage;
