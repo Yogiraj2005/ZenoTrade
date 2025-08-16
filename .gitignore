@@ -1,0 +1,26 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build folders (frontend/dashboard)
+dist/
+build/
+out/
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Optional: keep empty folders
+*.gitkeep
