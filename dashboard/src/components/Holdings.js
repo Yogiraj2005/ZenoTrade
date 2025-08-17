@@ -9,9 +9,10 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings]=useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:3002/allHoldings").then((res)=>{
-      // console.log(res.data);
-      setAllHoldings(res.data);
+    axios
+    .get("http://localhost:3002/allHoldings")
+    .then((res)=>{ setAllHoldings(res.data)
+    // .catch((err) => console.error("Error fetching holdings:", err));
     })
   },[]);
 
@@ -19,7 +20,7 @@ const Holdings = () => {
     <>
       <h3 className="title">Holdings ({allHoldings.length})</h3>
 
-      <div className="order-table">
+      <div className="order-table ">
         <table>
 
           <tr>
