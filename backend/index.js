@@ -212,6 +212,18 @@ app.get("/allOrders",async(req, res)=>{
   res.json(allOrders);
 });
 
+// Example Express.js endpoint
+app.delete("/sellOrder/:uid", async (req, res) => {
+  const { uid } = req.params;
+  try {
+    await OrdersModel.deleteOne({ name: uid }); // deletes the stock from orders
+    res.status(200).send({ message: "Stock sold successfully" });
+  } catch (error) {
+    res.status(500).send({ error: "Error selling stock" });
+  }
+});
+
+
 app.listen(PORT, () => {
   console.log("app started");
   mongoose.connect(uri);

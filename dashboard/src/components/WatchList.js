@@ -5,7 +5,7 @@ import { Tooltip, Grow } from "@mui/material";
 
 import { watchlist } from "../data/data";
 
-import { KeyboardArrowDown, KeyboardArrowUp, BarChartOutlined, MoreHoriz} from "@mui/icons-material";
+import { KeyboardArrowDown, KeyboardArrowUp} from "@mui/icons-material";
 
 const WatchList = () => {
   return (
@@ -68,6 +68,10 @@ const WatchListActions = ({ uid }) => {
     generalContext.openBuyWindow(uid);
   };
 
+  const handleSellClick = () =>{
+    generalContext.openSellWindow(uid);
+  }
+
   return (
     <span className="actions">
       <span>
@@ -85,10 +89,11 @@ const WatchListActions = ({ uid }) => {
           placement="top"
           arrow
           TransitionComponent={Grow}
+          onClick={handleSellClick}
         >
           <button className="sell">Sell</button>
         </Tooltip>
-        <Tooltip
+        {/* <Tooltip
           title="Analytics (A)"
           placement="top"
           arrow
@@ -102,7 +107,7 @@ const WatchListActions = ({ uid }) => {
           <button className="action">
             <MoreHoriz className="icon" />
           </button>
-        </Tooltip>
+        </Tooltip> */}
       </span>
     </span>
   );
